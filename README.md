@@ -1,33 +1,89 @@
-ErrorHandling Contract
-This is a Solidity smart contract that demonstrates different error handling techniques using assert, revert, and require functions.
+# Error Handling in Solidity
+This Solidity program is a simple program that demonstrates the use and functionality of Error Handling in Solidity programming language. The purpose of this program is to understand the use of assert, require and require function.
+## Description
 
-License
-This contract is using the MIT License.
+This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a three functions that show us how to use the functions require, revert and assert in solidity. 
 
-Prerequisites
-Solidity ^0.8.17
-Contract Details
-The ErrorHandling contract provides the following functions:
+## Getting Started
 
+### Executing program
+
+To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+
+Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., HelloWorld.sol). Copy and paste the following code into the file:
+
+```javascript
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.3;
+contract MyContract{
+  uint a=10;
+  uint b=0;
+  uint c;
   function Errors() external view{
      if(a==10){
      revert('Error, a is equal to 10');
      }
     }
-This function uses the revert call to handle the error generted. It gives the error message along with the reason 'Error, a is equal to 10'
-  
   function error2() external view{
       require(a!=10,'Error, a is equal to 10');
   }
-This function uses the require call to handle the error generted. It reverts the transaction with a custom error message stating that the 
-value of a is 10
-.
   function error3()external view{
       assert(a!=10);
   }
-This function uses assert to handle an error. If the condition fails, it triggers an "Internal error" and aborts the execution.
+}
+  
 
-Make sure you have Solidity ^0.8.17 installed.
-Compile and deploy the ErrorHandling contract to a supported Ethereum network.
-Interact with the deployed contract by calling the available functions and providing the required parameters.
+```
+
+To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "Compile HelloWorld.sol" button.
+
+Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "HelloWorld" contract from the dropdown menu, and then click on the "Deploy" button.
+
+Once the contract is deployed, you can interact with it by calling the sayHello function. Click on the "HelloWorld" contract in the left-hand sidebar, and then click on the "sayHello" function. Finally, click on the "transact" button to execute the function and retrieve the "Hello World!" message.
+
+## Authors
+
+Metacrafter Chris  
+[@metacraftersio](https://twitter.com/metacraftersio)
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
